@@ -1,0 +1,12 @@
+{
+    "name": "com.kekser.iksystem",
+    "displayName": "IK System",
+    "author": { "name": "Kekser", "url": "https://github.com/DerKekser" },
+    "version": "1.0.0",
+    "unity": "2020.3",
+    "description": "A ik system for unity.",
+    "keywords": [ "inverse", "kinematic", "ik" ],
+    "license": "MIT",
+    "category": "Task",
+    "dependencies": {}
+}

@@ -1,8 +1,7 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace Game.Gameplay.CCC
+namespace Kekser.IKSystem
 {
     public class AimIK : MonoBehaviour
     {

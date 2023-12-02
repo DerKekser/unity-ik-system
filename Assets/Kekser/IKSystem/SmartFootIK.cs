@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game.Gameplay.CCC
+namespace Kekser.IKSystem
 {
     public class SmartFootIK : MonoBehaviour
     {
