@@ -74,13 +74,13 @@ namespace Kekser.IKSystem
                 foreach (Transform boneTransform in bone.BoneTransforms)
                 {
                     Gizmos.color = Color.blue;
-                    Gizmos.DrawRay(boneTransform.position, Quaternion.Euler(bone.RotationOffset) * boneTransform.forward * 0.5f);
+                    Gizmos.DrawRay(boneTransform.position, boneTransform.rotation * Quaternion.Euler(bone.RotationOffset) * Vector3.forward * 0.5f);
                     
                     Gizmos.color = Color.red;
-                    Gizmos.DrawRay(boneTransform.position, Quaternion.Euler(bone.RotationOffset) * boneTransform.right * 0.5f);
+                    Gizmos.DrawRay(boneTransform.position, boneTransform.rotation * Quaternion.Euler(bone.RotationOffset) * Vector3.right * 0.5f);
                     
                     Gizmos.color = Color.green;
-                    Gizmos.DrawRay(boneTransform.position, Quaternion.Euler(bone.RotationOffset) * boneTransform.up * 0.5f);
+                    Gizmos.DrawRay(boneTransform.position, boneTransform.rotation * Quaternion.Euler(bone.RotationOffset) * Vector3.up * 0.5f);
                 }
             }
         }
