@@ -66,5 +66,23 @@ namespace Kekser.IKSystem
                 }
             }
         }
+        
+        private void OnDrawGizmosSelected()
+        {
+            foreach (BoneInfo bone in _bones)
+            {
+                foreach (Transform boneTransform in bone.BoneTransforms)
+                {
+                    Gizmos.color = Color.blue;
+                    Gizmos.DrawRay(boneTransform.position, Quaternion.Euler(bone.RotationOffset) * boneTransform.forward * 0.5f);
+                    
+                    Gizmos.color = Color.red;
+                    Gizmos.DrawRay(boneTransform.position, Quaternion.Euler(bone.RotationOffset) * boneTransform.right * 0.5f);
+                    
+                    Gizmos.color = Color.green;
+                    Gizmos.DrawRay(boneTransform.position, Quaternion.Euler(bone.RotationOffset) * boneTransform.up * 0.5f);
+                }
+            }
+        }
     }
 }
